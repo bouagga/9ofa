@@ -24,7 +24,7 @@ class PersonsImport implements ToModel
             'case'    => $row[5],
             'work'    => $row[6],
             'number_famly'    => $row[7],
-            'id_user' => Auth::user()->id,
+            'user_id' => Auth::user()->id,
         ]);
     }
 }

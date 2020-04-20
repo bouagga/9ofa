@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 
 class UserController extends Controller
 {
@@ -18,7 +20,7 @@ class UserController extends Controller
         $users = User::where('is_admin',0)->get();
         $usersid = User::where('is_admin',0)->pluck('id');
 //        dd($users);
-        return view('users.index')->with('users',$users)->with('usersid',$usersid);
+        return view('users.index')->with('users',auth()->user()->children()->get());
     }
 
     /**
@@ -30,11 +32,10 @@ class UserController extends Controller
     public function store(Request $request,User $user)
     {
 //        dd($request->all());
-        $validateAttributes= request()->validate([
-            'name' => ['required', 'string', 'max:255'],
-            'password' => ['required', 'string', 'min:8', 'confirmed'],
-        ]);
-        User::create($validateAttributes);
+        $user->name=$request->name;
+        $user->password=Hash::make($request->password);
+        $user->parent_id=Auth::user()->id;
+        $user->save();
         return  redirect('/users');
     }
 

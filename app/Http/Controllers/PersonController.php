@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Person;
 use Illuminate\Http\Request;
 use App\Imports\PersonsImport;
+use Illuminate\Support\Facades\Auth;
 use Maatwebsite\Excel\Facades\Excel;
 
 class PersonController extends Controller
@@ -16,8 +17,15 @@ class PersonController extends Controller
      */
     public function index()
     {
-
-       return  view('persons.index')->with('persones',auth()->user()->persons()->get());
+        if (auth()->user()->is_admin == 1) {
+            $persones = auth()->user()->persons()->get();
+        }else{
+            $persones = Person::where('user_id',auth()->user()->parent_id)->get();
+        }
+//            dd($persones);
+        $persone=Person::find(1);
+//       dd($persone->baskets()->get()->last()->created_at);
+       return  view('persons.index')->with('persones',$persones);
     }
 
     /**
@@ -27,7 +35,7 @@ class PersonController extends Controller
      */
     public function create()
     {
-        //
+        return view('persons.create');
     }
 
     /**
@@ -36,9 +44,20 @@ class PersonController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request , Person $person)
     {
-        //
+        $person->name=$request->name;
+        $person->phone=$request->phone;
+        $person->case=$request->case;
+        $person->work=$request->work;
+        $person->building=$request->building;
+        $person->number_famly=$request->number_famly;
+        $person->city=$request->city;
+        $person->city=$request->city;
+        $person->dor=$request->dor;
+        $person->user_id=Auth::user()->id;
+        $person->save();
+        return  redirect('/persons');
     }
 
     /**
@@ -60,7 +79,7 @@ class PersonController extends Controller
      */
     public function edit(Person $person)
     {
-        //
+        return view('persons.edit')->with('person',$person);
     }
 
     /**
@@ -72,7 +91,17 @@ class PersonController extends Controller
      */
     public function update(Request $request, Person $person)
     {
-        //
+        $person->name=$request->name;
+        $person->phone=$request->phone;
+        $person->case=$request->case;
+        $person->work=$request->work;
+        $person->building=$request->building;
+        $person->number_famly=$request->number_famly;
+        $person->city=$request->city;
+        $person->city=$request->city;
+        $person->dor=$request->dor;
+        $person->save();
+        return  redirect('/persons');
     }
 
     /**
@@ -83,7 +112,9 @@ class PersonController extends Controller
      */
     public function destroy(Person $person)
     {
-        //
+        $person->baskets()->delete();
+        $person->delete();
+        return  redirect('/persons');
     }
     public function importView()
 

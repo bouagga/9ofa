@@ -41,4 +41,17 @@ class User extends Authenticatable
     public function persons(){
         return $this->hasMany(Person::class);
     }
+
+    public function parent()
+    {
+        return $this->belongsTo(User::class, 'parent_id');
+    }
+
+    public function children()
+    {
+        return $this->hasMany(User::class, 'parent_id');
+    }
+    public function baskets(){
+        return $this->hasMany(Basket::class);
+    }
 }

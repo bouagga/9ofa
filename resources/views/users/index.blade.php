@@ -10,7 +10,7 @@
             <table id="example1" class="table table-bordered table-striped">
                 <thead>
                 <tr>
-                    <th>الاسم و اللقب</th>
+                    <th>اسم المستخدم</th>
                     <th>حذف</th>
                 </tr>
                 </thead>

@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('auth.login');
 });
 
 Auth::routes();
@@ -22,6 +22,7 @@ Route::get('admin/home', 'HomeController@adminHome')->name('admin.home')->middle
 
 Route::resource('users', 'UserController',['except' => ['show' ,'create' ]],['as'=>'admin'])->middleware('is_admin');
 Route::resource('persons', 'PersonController')->middleware('auth');
+Route::resource('baskets', 'BasketController')->middleware('auth');
 
 
 Route::get('importView', 'PersonController@importView')->name('importView');
