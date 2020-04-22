@@ -92,7 +92,48 @@
                     </div>
                 </div>
             </form>
+            <div class="row ">
+                <div class="card card-secondary col-lg-12">
+                    <div class="card-header">
+                        <h4 >جدول الاستفادات</h4>
+                    </div>
+                    <!-- /.card-header -->
+                    <div class="card-body">
+                        <table id="example1" class="table table-bordered table-striped">
+                            <thead>
+                            <tr>
+                                <th>مقدم الاستفادة</th>
+                                <th> تاريخ الاستفادة</th>
+                                <th>حذف</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            @foreach($person->baskets()->get() as $b)
+                                <tr>
+                                    @foreach($b->user()->get() as $u)
+                                    <td>{{$u->name}}</td>
+                                    @endforeach
+                                    <td>{{$b->created_at}}</td>
+                                    <td>
+                                        <form role="form" method="post" action="{{route('baskets.destroy',$b->id)}}">
+
+                                            @method('DELETE')
+                                            @csrf
+                                            <input type="hidden" name="key" value="{{$person->id}}">
+                                            <button class="fas fa-user-times" style="margin-left: 40%;"></button>
+                                        </form>
+                                    </td>
+                                </tr>
+                            @endforeach
+                            </tbody>
+
+                        </table>
+                    </div>
+                    <!-- /.card-body -->
+                </div>
+            </div>
         </div>
+
     </section>
 
 @endsection

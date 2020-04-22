@@ -89,12 +89,16 @@ class BasketController extends Controller
      * @param  \App\Basket  $basket
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Basket $basket)
+    public function destroy(Basket $basket ,Request $request)
     {
-//        dd($basket);
+//        dd($request->all());
+        $p=Person::find($request->key);
         $basket->user()->dissociate();
         $basket->person()->dissociate();
         $basket->delete();
+        if ($request->key=1){
+            return view('persons.edit')->with('person',$p);
+        }else
         return  redirect('/persons');
 
     }

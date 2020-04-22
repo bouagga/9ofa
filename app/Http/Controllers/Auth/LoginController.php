@@ -42,6 +42,7 @@ class LoginController extends Controller
     {
 //        dd($request->all());
         $input = $request->all();
+//        dd($input);
 
         $this->validate($request, [
             'name' => 'required',
@@ -50,6 +51,7 @@ class LoginController extends Controller
 
         if(auth()->attempt(array('name' => $input['name'], 'password' => $input['password'])))
         {
+//            dd('1447');
             if (auth()->user()->is_admin == 1) {
                 return redirect()->route('persons.index');
             }else{
@@ -60,5 +62,21 @@ class LoginController extends Controller
                 ->with('error','Email-Address And Password Are Wrong.');
         }
 
+    }
+
+    protected function attemptLogin(Request $request)
+    {
+        dd($request->all());
+        $user = User::where('name', $request->name)
+            ->where('password', $request->password)
+            ->first();
+
+        if(!isset($user)){
+            return false;
+        }
+
+        Auth::login($user);
+
+        return true;
     }
 }

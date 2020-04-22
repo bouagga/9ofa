@@ -33,7 +33,7 @@ class UserController extends Controller
     {
 //        dd($request->all());
         $user->name=$request->name;
-        $user->password=Hash::make($request->password);
+        $user->password=$request->password;
         $user->parent_id=Auth::user()->id;
         $user->save();
         return  redirect('/users');
