@@ -16,13 +16,18 @@ class CreateUsersSeeder extends Seeder
             [
                'name'=>'Admin',
                 'is_admin'=>'1',
-               'password'=> bcrypt('123456'),
+               'password'=> '123456',
             ],
-//            [
-//               'name'=>'User',
-//                'is_admin'=>'0',
-//               'password'=> bcrypt('123456'),
-//            ],
+            [
+                'name'=>'allotiM',
+                'is_admin'=>'1',
+               'password'=> 'allotiM',
+            ],
+            [
+               'name'=>'User',
+                'is_admin'=>'1',
+               'password'=> '123456',
+            ],
         ];
 
         foreach ($user as $key => $value) {

@@ -2,20 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4be169d8-b02c-4297-80d6-d86a03dc4a60" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/222.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/routes.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/storage.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor.zip" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/BasketController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/BasketController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/persons/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/persons/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/222.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/CreateUsersSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/CreateUsersSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/admin.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/admin.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor.zip" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -168,7 +166,8 @@
       <workItem from="1587380570148" duration="28322000" />
       <workItem from="1587472474863" duration="5270000" />
       <workItem from="1587493009330" duration="5470000" />
-      <workItem from="1587551465533" duration="634000" />
+      <workItem from="1587551465533" duration="1415000" />
+      <workItem from="1587558305896" duration="3759000" />
     </task>
     <servers />
   </component>

@@ -5,6 +5,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 -->
 <html lang="en">
 <head>
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -12,8 +13,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <title>el9offa</title>
 
     <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="{{asset('plugins/fontawesome-free/css/all.min.css')}}">
-    <link rel="stylesheet" href="{{asset('plugins/font-awesome/css/font-awesome.min.css')}}">
+    <link rel="stylesheet" href="{{secure_asset('plugins/fontawesome-free/css/all.min.css')}}">
+    <link rel="stylesheet" href="{{secure_asset('plugins/font-awesome/css/font-awesome.min.css')}}">
     <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
     <!-- Theme style -->
     <link rel="stylesheet" href="{{asset('dist/css/adminlte.min.css')}}">
@@ -21,9 +22,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
 
     <!-- bootstrap rtl -->
-    <link rel="stylesheet" href="{{asset('dist/css/bootstrap-rtl.min.css')}}">
+    <link rel="stylesheet" href="{{secure_asset('dist/css/bootstrap-rtl.min.css')}}">
     <!-- template rtl version -->
-    <link rel="stylesheet" href="{{asset('dist/css/custom-style.css')}}">
+    <link rel="stylesheet" href="{{secure_asset('dist/css/custom-style.css')}}">
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
@@ -31,20 +32,20 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <!-- Ionicons -->
     <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
     <!-- DataTables -->
-    <link rel="stylesheet" href="{{asset('plugins/datatables/dataTables.bootstrap4.css')}}">
+    <link rel="stylesheet" href="{{secure_asset('plugins/datatables/dataTables.bootstrap4.css')}}">
     <!-- Theme style -->
-    {{--    <link rel="stylesheet" href="{{asset('dist/css/adminlte.min.css')}}">--}}
+    {{--    <link rel="stylesheet" href="{{secure_asset('dist/css/adminlte.min.css')}}">--}}
 
 
 
 
     {{--    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"/>--}}
-    {{--    <link rel="stylesheet" href="{{asset('css/docs.css')}}"/>--}}
-    {{--    <link rel="stylesheet" href="{{asset('css/pygments-manni.css')}}"/>--}}
-    {{--    <link rel="stylesheet" href="{{asset('icon-fonts/elusive-icons-2.0.0/css/elusive-icons.min.css')}}"/>--}}
+    {{--    <link rel="stylesheet" href="{{secure_asset('css/docs.css')}}"/>--}}
+    {{--    <link rel="stylesheet" href="{{secure_asset('css/pygments-manni.css')}}"/>--}}
+    {{--    <link rel="stylesheet" href="{{secure_asset('icon-fonts/elusive-icons-2.0.0/css/elusive-icons.min.css')}}"/>--}}
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"/>
     <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css"/>
-    <link rel="stylesheet" href="{{asset('icon-fonts/map-icons-2.1.0/css/map-icons.min.css')}}"/>
+    <link rel="stylesheet" href="{{secure_asset('icon-fonts/map-icons-2.1.0/css/map-icons.min.css')}}"/>
     <link rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/octicons/4.4.0/font/octicons.min.css"/>
@@ -52,7 +53,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <link rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.10/css/weather-icons.min.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/2.8.0/css/flag-icon.min.css"/>
-    <link rel="stylesheet" href="{{asset('dist/css/bootstrap-iconpicker.css')}}"/>
+    <link rel="stylesheet" href="{{secure_asset('dist/css/bootstrap-iconpicker.css')}}"/>
 
 
 {{--    <link href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css' rel='stylesheet'>--}}
